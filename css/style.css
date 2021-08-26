@@ -1,0 +1,13 @@
+.fanoff {
+    width: 500px;
+}
+
+.forBgChng {
+    background-color: yellow;
+}
+#greetingsbutton{
+    width: 100px;
+}
+#resultshow1,#resultshow2,#resultshow3,#resultshow4,#resultshow5,#resultshow6{
+    padding: 0 10px;
+}
