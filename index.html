@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <title>JS JQ Practice</title>
+</head>
+
+<body>
+    <section class="jsevent">
+        <div class="container">
+            <div class="row justify-content-center">
+                <button type="button" id="greetingsbutton" class="btn btn-outline-info" onclick="greetings()">Greetings!</button>
+                <h1 class="text-center text-warning">Let's practice Javascript Event and selector</h1>
+                <div class="col-lg-12">
+                    <h2 id="firsth2">Click the button below to change inner HTML</h2>
+                    <button type="button" class="btn btn-warning" onclick="document.getElementById('firsth2').innerHTML = 'Hello Bangladesh!'">Click Me to change inner html</button>
+                    <h3 id="firsth3">Click the button bellow to change the font size</h2>
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('firsth3').style.fontSize = '20px' ">Click Me to change font size</button>
+                    <h3>Let's practice document.getElementsByTagName</h3>
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementsByTagName('h3')[1].style.fontSize = '20px' ">Click me to change font size</button>
+                    <h2 class="text-center">Click the button to turn on the fan</h2>
+                    <button type="button" class="btn btn-danger" onclick="document.getElementsByClassName('fanoff')[0].src ='images/fanOn.gif' ">Click Me to turn on the fan</button>
+                    <img src="images/fanOff.jpg" class="img-fluid fanoff" id="fanoff" alt="FanOff">
+                    <button type="button" class="btn btn-danger" onclick="document.getElementsByClassName('fanoff')[0].src = 'images/fanOff.jpg' ">Click Me to turn off the fan</button>
+                    <p class="forBgChng">Double click in this paragraph to change background color</p>
+                    <button type="button" class="btn btn-dark mx-1 mb-3" ondblclick="document.getElementsByTagName('p')[0].style.backgroundColor = 'red' ">Double Click On me</button>
+                    <button type="button" class="btn btn-outline-danger mx-1 mb-3" onmouseover="document.getElementsByClassName('forBgChng')[0].style.backgroundColor = 'yellow' ">Hover on me to reset</button>
+                    <p id="customp">Change font color on mouse in and reset on mouse out</p>
+                    <button type="button" class="btn btn-success" onmouseenter="document.getElementById('customp').style.color='red' ">Mouse Enter to change color</button>
+                    <button type="button" class="btn btn-outline-dark" onmouseout="document.getElementById('customp').style.color='black' ">Mouse Out to Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="jsfunction">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="text-center text-warning">Let's practice Javascript Function</h1>
+                <div class="col-lg-12">
+                    <h4 id="forDate">Click the button below to show date</h4>
+                    <button type="button" class="btn btn-outline-warning" onclick="showDate()">Click Me to display time</button>
+                    <h4 id="forRepeat">Click the button to see the useage of repeat built in function!</h4>
+                    <button type="button" class="btn btn-outline-dark" onclick="repeatText()">Click Me to show a repeated text!</button>
+                    <h4 id="IdToChangeBgColor">Click the button below to change background color!</h4>
+                    <button type="button" class="btn btn-outline-info" onclick="bgchng()">Click to change background color</button>
+                </div>
+                <h2 class="text-center text-warning">Let's practice Javascript Operators</h2>
+                <div class="col-6 bg-info py-3 mt-3">
+                    <p class="mt-3">Adding</p>
+                    <input type="text" id="Num1" placeholder="Enter Your First Number"> +
+                    <input type="text" id="Num2" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow1" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-success" onclick="forAdding()"> click me to add numbers</button>
+                </div>
+                <div class="col-6  bg-primary py-3 mt-3">
+                    <p class="mt-3">subtraction</p>
+                    <input type="text" id="Num3" placeholder="Enter Your First Number"> -
+                    <input type="text" id="Num4" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow2" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-warning" onclick="forSubstracting()"> click me to subtract numbers</button>
+                </div>
+                <div class="col-6  bg-danger py-3 mt-3">
+                    <p class="mt-3 text-light">Multiplication</p>
+                    <input type="text" id="Num5" placeholder="Enter Your First Number"> *
+                    <input type="text" id="Num6" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow3" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-light" onclick="forMultiply()"> click me to Multiply numbers</button>
+                </div>
+                <div class="col-6  bg-secondary py-3 mt-3">
+                    <p class="mt-3">Division</p>
+                    <input type="text" id="Num7" placeholder="Enter Your First Number"> /
+                    <input type="text" id="Num8" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow4" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-dark" onclick="forDivision()"> click me to Divide numbers</button>
+                </div>
+                <div class="col-6  bg-warning py-3 mt-3">
+                    <p class="mt-3">Remainder</p>
+                    <input type="text" id="Num9" placeholder="Enter Your First Number"> %
+                    <input type="text" id="Num10" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow5" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-success" onclick="forRemainder()"> click me to see remainder</button>
+                </div>
+                <div class="col-6  bg-success py-3 mt-3">
+                    <p class="mt-3">Power</p>
+                    <input type="text" id="Num11" placeholder="Enter Your First Number"> **
+                    <input type="text" id="Num12" placeholder="Enter Your Second Number">
+                    <br> <br>
+                    <p id="resultshow6" class="border border-2 border-dark d-inline">Here Is Your Result!</p> <br> <br>
+                    <button type="button" class="btn btn-outline-dark" onclick="forPower()"> click me to see result</button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <p id="toconsoleID">Output in console.log</p>
+                    <button type="button" class="btn btn-outline-info" onclick="toConsole()">Click Me and check console</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="jq_practice">
+        <div class="container">
+            <h1>Let's Practice JQuery</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <p>Click this button to get an alert</p>
+                    <button type="button" id="jqAlertBtn" class="btn btn-outline-info">JQ Alert Button</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- JS links -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
